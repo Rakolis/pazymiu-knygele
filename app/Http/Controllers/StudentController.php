@@ -14,9 +14,10 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        // gauname duomenis is duombazes/modelio
         $students = Student::all();
-        return view('student.index', compact('students'));
+
+        return view('students.index', compact('students'));
     }
 
     /**
@@ -27,6 +28,8 @@ class StudentController extends Controller
     public function create()
     {
         //
+
+        return view('students.create');
     }
 
     /**
@@ -37,7 +40,23 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //turetume validuoti duomenis
+        $student = new Student();
+
+        $student->name = $request->input('name');
+        $student->surname = $request->input('surname');
+        $student->email = $request->input('email');
+        $student->phone = $request->input('phone');
+        $student->save();
+
+        // galima naudoti toki buda
+        //$student->save($request->all());
+
+
+        // isideti session flash message, apie sekminga isaugojia
+
+        return redirect()->route('students.index');
+
     }
 
     /**
@@ -48,7 +67,9 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        //
+        $student = Student::findOrFail($id);
+
+        return view('students.show', compact('student'));
     }
 
     /**
@@ -83,5 +104,11 @@ class StudentController extends Controller
     public function destroy($id)
     {
         //
+        $student = Student::findOrFail($id);
+
+        $student->delete();
+
+        // session flash zinute
+        return redirect()->route('students.index');
     }
 }
