@@ -10,7 +10,7 @@
                     <h1>Prideti studenta</h1>
                 @endisset
 
-                <form method="POST" action="{{ route('students.store') }}">
+
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -21,7 +21,7 @@
                         </div>
                     @endif
 
-                    @csrf
+
                     @isset($student->id)
                         <form method="POST" action="{{ route('students.update', $student->id) }}">
                             @method('PUT')
@@ -59,13 +59,13 @@
                                         <input type="submit" value="Issaugoti" class="btn btn-success"/>
 
                                     @else
-                                        
+
 
                                         <hr>
                                         <input type="submit" value="Prideti" class="btn btn-success" />
-                                </form>
-                            @endisset
-                        </form>
+
+                                        @endisset
+                                 </form>
             </div>
         </div>
     </div>

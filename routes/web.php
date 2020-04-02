@@ -19,4 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('students', 'StudentController');
-
+Route::get('/students/{id}/grade', 'StudentController@gradeCreate')->name('student.grade');
