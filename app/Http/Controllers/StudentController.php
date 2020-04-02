@@ -1,9 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
+use App\Http\Requests\StudentRequest;
 use App\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class StudentController extends Controller
 {
@@ -16,10 +16,8 @@ class StudentController extends Controller
     {
         // gauname duomenis is duombazes/modelio
         $students = Student::all();
-
         return view('students.index', compact('students'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -28,10 +26,9 @@ class StudentController extends Controller
     public function create()
     {
         //
-
-        return view('students.create');
+        $student = new Student();
+        return view('students.create', compact('student'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -40,25 +37,28 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //turetume validuoti duomenis
+        //validuoti duomenis paprastuoju budu
+        $request->validate([
+            'name' => 'required|max:255',
+            'surname' => 'required|max:255',
+            'email' => 'required|email',
+        ]);
         $student = new Student();
-
         $student->name = $request->input('name');
         $student->surname = $request->input('surname');
         $student->email = $request->input('email');
         $student->phone = $request->input('phone');
         $student->save();
-
         // galima naudoti toki buda
         //$student->save($request->all());
 
 
         // isideti session flash message, apie sekminga isaugojia
+        Session::flash('status', 'Sekmingai sukurtas studentas');
 
         return redirect()->route('students.index');
 
     }
-
     /**
      * Display the specified resource.
      *
@@ -68,10 +68,8 @@ class StudentController extends Controller
     public function show($id)
     {
         $student = Student::findOrFail($id);
-
         return view('students.show', compact('student'));
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -80,9 +78,9 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $student = Student::findOrFail($id);
+        return view('students.create', compact('student'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -90,9 +88,21 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    // validuoju duomenis teisingu budu, naudodamas atskira StudentRequest klase.
+    public function update(StudentRequest $request, $id)
     {
-        //
+        $student = Student::findOrFail($id);
+        $student->name = $request->input('name');
+        $student->surname = $request->input('surname');
+        $student->email = $request->input('email');
+        $student->phone = $request->input('phone');
+
+        $student->save();
+
+        // session flash zinute
+        $request->session()->flash('status', 'Sekmingai atnaujintas studentas');
+
+        return redirect()->route('students.show', $student->id);
     }
 
     /**
@@ -105,10 +115,12 @@ class StudentController extends Controller
     {
         //
         $student = Student::findOrFail($id);
-
         $student->delete();
 
         // session flash zinute
+        Session::flash('status', 'Sekmingai istrintas studentas');
+        Session::flash('alert-class', 'alert-danger');
+
         return redirect()->route('students.index');
     }
 }

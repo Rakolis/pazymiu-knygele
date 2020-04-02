@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4dc44b29-b0e8-45fc-abca-b308bde4da2a" name="Default Changelist" comment="student:&#10;*ikelimas, &#10;*trynimas, &#10;*vaizdavimas. &#10;NERA update.&#10;pridetas boostrapas. ir kiti minor redagavimai">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/grades.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/grades.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4dc44b29-b0e8-45fc-abca-b308bde4da2a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_31_152536_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_31_152536_create_students_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +15,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -167,8 +162,16 @@
       <option name="presentableId" value="Default" />
       <updated>1585663486528</updated>
       <workItem from="1585663488128" duration="7384000" />
-      <workItem from="1585739665720" duration="2334000" />
+      <workItem from="1585739665720" duration="4665000" />
+      <workItem from="1585757459856" duration="3467000" />
     </task>
+    <task id="LOCAL−00001" summary="student:&#10;*ikelimas, &#10;*trynimas, &#10;*vaizdavimas. &#10;NERA update.&#10;pridetas boostrapas. ir kiti minor redagavimai">
+      <created>1585742033269</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1585742033269</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,45 +197,49 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585740687234" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1585741863474">
+    <state x="721" y="101" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585757313571">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585741863474" />
+    <state x="721" y="101" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1585757313570" />
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1585742032000">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585742032000" />
     <state x="677" y="119" key="FileChooserDialogImpl" timestamp="1585669333027">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="677" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585669333027" />
-    <state width="1323" height="163" key="GridCell.Tab.0.bottom" timestamp="1585740228848">
+    <state width="1323" height="163" key="GridCell.Tab.0.bottom" timestamp="1585757320045">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="163" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585740228848" />
-    <state width="1323" height="163" key="GridCell.Tab.0.center" timestamp="1585740228848">
+    <state width="1323" height="163" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585757320045" />
+    <state width="1323" height="163" key="GridCell.Tab.0.center" timestamp="1585757320045">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="163" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585740228848" />
-    <state width="1323" height="163" key="GridCell.Tab.0.left" timestamp="1585740228848">
+    <state width="1323" height="163" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585757320045" />
+    <state width="1323" height="163" key="GridCell.Tab.0.left" timestamp="1585757320045">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="163" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585740228848" />
-    <state width="1323" height="163" key="GridCell.Tab.0.right" timestamp="1585740228848">
+    <state width="1323" height="163" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585757320045" />
+    <state width="1323" height="163" key="GridCell.Tab.0.right" timestamp="1585757320045">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="163" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585740228848" />
+    <state width="1323" height="163" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585757320045" />
     <state x="184" y="5" key="SettingsEditor" timestamp="1585739691924">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="5" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585739691923" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1585739978550">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1585742073267">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585739978550" />
-    <state x="578" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1585739673402">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585742073267" />
+    <state x="578" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1585832296518">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="578" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585739673402" />
-    <state x="560" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585741080005">
+    <state x="578" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585832296518" />
+    <state x="560" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585835219148">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="560" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585741080005" />
+    <state x="560" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585835219148" />
   </component>
 </project>
