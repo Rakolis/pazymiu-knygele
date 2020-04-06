@@ -15,8 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'StudentController@index');
 
+
+// sugeneruoja visus autentifikacijos route'us /login /register ir kitus
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::resource('students', 'StudentController');
-Route::get('/students/{id}/grade', 'StudentController@gradeCreate')->name('student.grade');
+Route::resource('grades', 'GradesController')->middleware('auth');
+Route::resource('lectures', 'LecturesController');
+
+//Route::get('/students/{id}/grade', 'StudentController@gradeCreate')->name('student.grade');

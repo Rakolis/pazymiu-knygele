@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -11,18 +12,24 @@
                     <tr>
                         <th>Ivertinimas</th>
                         <th>Paskaita</th>
+                        <th>Destytojas</th>
                     </tr>
                     @foreach($student->grades as $grade)
+                        @if($grade->user_id === Auth::user()->id)
                         <tr>
                             <td>
                                 {{ $grade->grade }}
                             </td>
                             <td>
-                                <a href="#">
+                                <a href="{{ route('lectures.show', $grade->lecture->id) }}">
                                     {{ $grade->lecture->name }}
                                 </a>
                             </td>
+                            <td>
+                                {{  $grade->user->name }}
+                            </td>
                         </tr>
+                        @endif
                     @endforeach
                 </table>
 
@@ -36,20 +43,20 @@
                         <ul>
                             <li>
                                 El.pastas: {{ $student->email }}
-                                El.pastas: {{ $student->email }}
                             </li>
                             <li>
                                 Telefonas: {{ $student->phone }}
                             </li>
+
                             <li>
                                 Registruotas nuo: {{ $student->created_at->format('Y F d') }}
                             </li>
                         </ul>
+
                         <hr>
                         <form action="{{ route('students.destroy', $student->id) }}" method="POST">
                             @method('DELETE')
                             @csrf
-                            <input type="submit" class="btn btn-danger" value="X" />
                             <input type="submit" class="btn btn-danger" value="X"/>
                         </form>
                         <hr>
@@ -57,7 +64,7 @@
                             Redaguoti
                         </a>
 
-                        <a href="#" class="btn btn-success">
+                        <a href="{{ route('grades.create') }}" class="btn btn-success">
                             Prideti pazymi
                         </a>
                     </div>
